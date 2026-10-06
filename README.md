@@ -96,4 +96,4 @@ pytest -q && ruff check .
 
 ## License
 
-MIT (c) Denis Bernardino
+MIT (c) Denis Henrique Bernardino
