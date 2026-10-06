@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "legacy-lens"
+version = "0.1.0"
+description = "Guardrails and tooling to modernize legacy code (VB6, Delphi, PL/SQL) with AI, safely."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Denis Bernardino" }]
+requires-python = ">=3.10"
+keywords = ["legacy", "modernization", "vb6", "delphi", "plsql", "ai", "guardrails", "claude-code"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[project.scripts]
+legacy-lens = "legacy_lens.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+legacy_lens = ["guardrails/*.md"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
