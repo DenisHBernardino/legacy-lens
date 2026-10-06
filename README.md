@@ -6,6 +6,10 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+<p align="center">
+  <img src="docs/demo.gif" alt="Legacy Lens: AI executes, guardrails constrain, tests prove" width="420">
+</p>
+
 Every company has that one system nobody dares to touch: a VB6, Delphi or PL/SQL
 codebase, decades of business rules, no documentation, no vendor support.
 
